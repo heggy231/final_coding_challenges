@@ -15,7 +15,9 @@ def non_repeat_substring(word):
 
 
     # iterate through the string
-    # initialize an end counter that you can work with.
+    # have an end counter.
+
+
 
 
 
