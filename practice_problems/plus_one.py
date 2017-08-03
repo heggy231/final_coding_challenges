@@ -16,6 +16,8 @@ def plus_one(arr):
     [2, 0]
     >>> plus_one([1, 9, 9])
     [2, 0, 0]
+    >>> plus_one([9, 9])
+    [1, 0, 0]
     """
 
     pointer = len(arr) - 1
@@ -23,10 +25,17 @@ def plus_one(arr):
     if arr[pointer] <= 8:
         arr[pointer] += 1
     else:
-        while arr[pointer] > 8:
-         arr[pointer] = 0
-         pointer -= 1
+        while arr[pointer] > 8 and pointer >= 0:
+            # checking on the first element, returning right then and there. 
+            if pointer == 0:
+                arr[pointer] = 0
+                arr.insert(0, 1)
+                return arr
+            arr[pointer] = 0
+            pointer -= 1
         arr[pointer] += 1
+
+
 
 
 
