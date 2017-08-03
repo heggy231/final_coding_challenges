@@ -11,6 +11,7 @@ class minStack(object):
             self.mins.append(item)
         else:
             if item < self.mins[-1]:
+                self.mins.pop()
                 self.mins.append(item)
         self.stack.append(item)
 
@@ -32,6 +33,7 @@ test_stack = minStack()
 test_stack.push(-3)
 test_stack.push(1)
 test_stack.push(5)
+test_stack.push(-9)
 print(test_stack.stack)
 print(test_stack.mins)
 print(test_stack.min())
