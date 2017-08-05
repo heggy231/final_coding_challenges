@@ -20,7 +20,7 @@ class minStack(object):
         if len(self.mins) > 0:
             if self.mins[-1] == item_to_remove:
                 self.mins.pop()
-        return self.stack.pop()
+        return item_to_remove
 
     def peek(self):
         return self.stack[0]
@@ -34,6 +34,9 @@ test_stack.push(-3)
 test_stack.push(1)
 test_stack.push(5)
 test_stack.push(-9)
+test_stack.push(-27)
+test_stack.push(-5)
+test_stack.push(-33)
 print(test_stack.stack)
 print(test_stack.mins)
 print(test_stack.min())
